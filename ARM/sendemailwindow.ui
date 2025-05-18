@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SendEmailWindow</class>
+ <widget class="QDialog" name="SendEmailWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="fileLabel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>220</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Файл не выбран</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectFileButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    /* Исходный градиент: от тёмно-фиолетового (#4B0082) к пурпурному (#8B008B) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #4B0082, stop:1 #8B008B);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    /* Новый градиент: добавляем ярко-розовый (#FF00FF) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #FF00FF, stop:1 #8B008B);
+}
+
+QPushButton:pressed {
+    /* При нажатии — более тёмный розовый (#CC00CC) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #CC00CC, stop:1 #6A006A);
+}</string>
+   </property>
+   <property name="text">
+    <string>Выбрать файл</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>270</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    /* Исходный градиент: от тёмно-фиолетового (#4B0082) к пурпурному (#8B008B) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #4B0082, stop:1 #8B008B);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    /* Новый градиент: добавляем ярко-розовый (#FF00FF) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #FF00FF, stop:1 #8B008B);
+}
+
+QPushButton:pressed {
+    /* При нажатии — более тёмный розовый (#CC00CC) */
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #CC00CC, stop:1 #6A006A);
+}</string>
+   </property>
+   <property name="text">
+    <string>Отправить файл</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>19</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Выберите получателя</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Введите текст сообщения</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="Text">
+   <property name="geometry">
+    <rect>
+     <x>113</x>
+     <y>114</y>
+     <width>411</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>9</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit 
+{
+	background-color: #f0f0f0;
+	color: #000000;
+}</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="studentComboBox">
+   <property name="geometry">
+    <rect>
+     <x>111</x>
+     <y>50</y>
+     <width>421</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
